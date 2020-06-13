@@ -4,29 +4,24 @@ body {
 	background-color: black;
 }
 
-h1, h3, h4, h5, h6, a, button {
+h1, h2, h3, h4, h5, h6, a, button {
 	font-family: 'Overpass Mono', monospace;
 	color: white;
+	font-weight: 300;
 }
 
-h1, h3 {
-	font-weight: 300
-}
-
-p, h2, ul, li {
+p, ul, li {
 	font-family: 'Ubuntu', sans-serif;
 	color: #bababa;
 }
 
 button {
-	border: 2px solid #aa77ff;
+	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
   background-color: black;
   color: #aa77ff;
   padding: 14px 28px;
   cursor: pointer;
 }
-
-/* other color options: #8274c9, 8a73ff, medium slate blue */
 
 button:hover {
 	background-color: #aa77ff;
