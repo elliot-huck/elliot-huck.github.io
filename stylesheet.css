@@ -4,7 +4,7 @@ body {
 	background-color: black;
 }
 
-h1, h3, h4, h5, h6, button a {
+h1, h3, h4, h5, h6, a, button {
 	font-family: 'Overpass Mono', monospace;
 	color: white;
 }
@@ -26,7 +26,7 @@ button {
   cursor: pointer;
 }
 
-/* #8274c9, 8a73ff */
+/* other color options: #8274c9, 8a73ff, medium slate blue */
 
 button:hover {
 	background-color: #aa77ff;
