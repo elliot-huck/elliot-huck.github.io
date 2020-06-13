@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400|Ubuntu&display=swap');
+
+body {
+	background-color: black;
+}
+
+h1, h3, h4, h5, h6, button a {
+	font-family: 'Overpass Mono', monospace;
+	color: white;
+}
+
+h1, h3 {
+	font-weight: 300
+}
+
+p, h2, ul, li {
+	font-family: 'Ubuntu', sans-serif;
+	color: #bababa;
+}
+
+button {
+	border: 2px solid #aa77ff;
+  background-color: black;
+  color: #aa77ff;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+
+/* #8274c9, 8a73ff */
+
+button:hover {
+	background-color: #aa77ff;
+	color: black;
+}
+
+/* a.ui {
+  font-size: 1.07em !important;
+  transform: scale(1, 1.2) !important;
+} */
