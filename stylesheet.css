@@ -28,6 +28,12 @@ button:hover {
 	color: black;
 }
 
+img {
+	width: 300px;
+	height: auto;
+	display: block;
+}
+
 /* a.ui {
   font-size: 1.07em !important;
   transform: scale(1, 1.2) !important;
