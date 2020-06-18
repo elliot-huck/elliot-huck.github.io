@@ -2,6 +2,7 @@
 
 body {
 	background-color: black;
+	font-size: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
@@ -29,12 +30,46 @@ button:hover {
 }
 
 img {
-	width: 300px;
+	width: 40%;
 	height: auto;
 	display: block;
+}
+
+header, section {
+	margin: 15%;
+}
+
+header {
+	text-align: center;
+	margin-top: 6em;
+	height: 50vh;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 3.5em;
+	/* font-size: 5vw; */
+	margin-block-end: 0;
+}
+
+header p {
+	margin-block-start: 0;
+	font-size: 1.4em;
 }
 
 /* a.ui {
   font-size: 1.07em !important;
   transform: scale(1, 1.2) !important;
 } */
+
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
+	h1 {
+		 font-size: 2em;
+	}
+
+	header, section {
+		margin: 5%;
+	}
+}
