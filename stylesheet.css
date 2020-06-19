@@ -14,6 +14,7 @@ header, footer {
 }
 
 section {
+	display: grid;
 	grid-column: 2 / span 1;
 }
 
@@ -41,10 +42,6 @@ button:hover {
 	color: black;
 }
 
-header, section {
-	/* margin: 10%; */
-}
-
 header {
 	text-align: center;
 }
@@ -62,11 +59,81 @@ header p {
 	font-size: 1.4em;
 }
 
+section#about > div {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/* grid-template-rows: 1fr 1fr; */
+}
+
+section#about > div > div:last-child {
+	text-align: center; /* img */
+}
+
+section#about img {
+	height: auto;
+	max-width: 250px;
+	min-width: 100px;
+	margin: 5%;
+}
+
+section#about > div:last-child {
+	grid-column: 1 / span 3;
+	grid-row: 2 / span 1;
+}
+
+#about a {
+	/* padding: 0; */
+}
+/*
+button > a {
+	width: 100%;
+	height: 100%;
+} */
+
+#about a {
+	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
+  background-color: black;
+  color: #aa77ff;
+	padding: 14px 28px;
+	text-decoration: none;
+	justify-self: center;
+  /* cursor: pointer; */
+}
+
+#about a:hover {
+	background-color: #aa77ff;
+	color: black;
+}
+
+
+/*
+#about a {
+	grid-row: 1 / span 2;
+} */
+/* 
+#about > div:first-child {
+	width: 50%;
+	grid-column: 1 / span 1;
+}
+
+#about > div:nth-child(2) {
+	grid-column: 2 / span 1;
+
+}
+
+#about img {
+	width: 100%;
+	height: auto;
+} */
+
+
+
+/*
 section > div {
 	display: flex;
 	flex-wrap: wrap;
-}
-
+} */
+/*
 #about > div > div {
 	width: 50%;
 }
@@ -74,7 +141,7 @@ section > div {
 #about img {
 	width: 40%;
 	height: auto;
-}
+} */
 
 /* a.ui {
   font-size: 1.07em !important;
@@ -86,8 +153,8 @@ section > div {
 	h1 {
 		 font-size: 2em;
 	}
-
+/*
 	header, section {
 		margin: 5%;
-	}
+	} */
 }
