@@ -33,14 +33,16 @@ a {
 	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
   background-color: black;
   color: #aa77ff;
-	padding: 14px 28px;
+	padding: 10px 20px;
 	text-decoration: none;
 	justify-self: center;
+	font-size: .9em;
 }
 
 a:hover {
 	background-color: #aa77ff;
 	color: black;
+	font-weight: bold;
 }
 
 header {
@@ -112,14 +114,22 @@ section#experience > div {
 	justify-self: center;
 }
 
+footer {
+	text-align: right;
+	font-size: small;
+	padding-right: 10px;
+	margin-top: 10%;
+}
 
 
 @media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
 	h1 {
 		 font-size: 2em;
 	}
-/*
-	header, section {
-		margin: 5%;
-	} */
+
+	footer {
+		text-align: center;
+		padding: 0;
+		margin: 20% 0 0 0;
+	}
 }
