@@ -82,6 +82,19 @@ section#about > div:last-child {
 	grid-row: 2 / span 1;
 }
 
+section#projects > div {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+	grid-gap: 30px;
+	margin-bottom: 30px;
+	/* grid-template-rows: 1fr 1fr; */
+}
+
+section#projects > div > div {
+	padding: 20px;
+	padding-top: 0;
+	border: 1px solid white;
+}
 
 
 
