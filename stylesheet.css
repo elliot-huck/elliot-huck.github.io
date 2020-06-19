@@ -3,6 +3,18 @@
 body {
 	background-color: black;
 	font-size: 1.2em;
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-rows: auto;
+	justify-items: center;
+}
+
+header, footer {
+	grid-column: 1 / span 3;
+}
+
+section {
+	grid-column: 2 / span 1;
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
@@ -29,20 +41,12 @@ button:hover {
 	color: black;
 }
 
-img {
-	width: 40%;
-	height: auto;
-	display: block;
-}
-
 header, section {
-	margin: 15%;
+	/* margin: 10%; */
 }
 
 header {
 	text-align: center;
-	margin-top: 6em;
-	height: 50vh;
 }
 
 h1 {
@@ -56,6 +60,20 @@ h1 {
 header p {
 	margin-block-start: 0;
 	font-size: 1.4em;
+}
+
+section > div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#about > div > div {
+	width: 50%;
+}
+
+#about img {
+	width: 40%;
+	height: auto;
 }
 
 /* a.ui {
