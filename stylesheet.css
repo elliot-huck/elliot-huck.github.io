@@ -7,12 +7,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
-p, ul, li {
+p, li {
 	color: #bababa;
 	font-family: 'Ubuntu', sans-serif;
 }
 
-a {
+a.link-button {
 	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
   color: #aa77ff;
 	font-family: 'Overpass Mono', monospace;
@@ -23,7 +23,7 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
+a.link-button:hover {
 	background-color: #aa77ff;
 	color: black;
 	font-weight: bold;
@@ -72,16 +72,22 @@ header p {
 /* ---------------------------------------------------------------------- ABOUT SECTION */
 section#about > div {
 	display: grid;
+	grid-gap: 30px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	margin-bottom: 30px;
 }
 
 section#about > div > div:last-child {
 	text-align: center;
 }
 
+div.about-img-container {
+	display: grid;
+}
+
 section#about img {
 	height: auto;
-	margin: 5%;
+	place-self: center;
 	max-width: 250px;
 	min-width: 100px;
 }
@@ -101,7 +107,7 @@ section#projects > div {
 	/* grid-template-rows: 1fr 1fr; */
 }
 
-section#projects > div > div {
+div.project-card {
 	border: 1px solid white;
 	padding: 20px;
 	padding-top: 0;
@@ -113,7 +119,8 @@ section#experience > ul {
 	display: grid;
 	grid-gap: 30px;
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-	margin-bottom: 60px;
+	margin-bottom: 30px;
+	margin-top: 0;
 	padding: 0;
 }
 
