@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400|Ubuntu&display=swap');
 
+/* TEXT STYLINGS --------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+	font-family: 'Overpass Mono', monospace;
+	font-weight: 300;
+}
+
+p, ul, li {
+	color: #bababa;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
+  color: #aa77ff;
+	font-family: 'Overpass Mono', monospace;
+	font-size: .9em;
+	font-weight: 300;
+	justify-self: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #aa77ff;
+	color: black;
+	font-weight: bold;
+}
+
+
+/* BASIC LAYOUT --------------------------------------------------*/
 body {
 	background-color: black;
-	font-size: 1.2em;
 	display: grid;
+	font-size: 1.2em;
 	grid-template-columns: 1fr 10fr 1fr;
 	grid-template-rows: auto;
 }
@@ -18,45 +49,18 @@ section {
 	padding: 5%;
 }
 
-h1, h2, h3, h4, h5, h6, a {
-	font-family: 'Overpass Mono', monospace;
-	color: white;
-	font-weight: 300;
-}
 
-p, ul, li {
-	font-family: 'Ubuntu', sans-serif;
-	color: #bababa;
-}
-
-a {
-	border: 2px solid #aa77ff; /* other color options: #8274c9, 8a73ff, medium slate blue */
-  background-color: black;
-  color: #aa77ff;
-	padding: 10px 20px;
-	text-decoration: none;
-	justify-self: center;
-	font-size: .9em;
-}
-
-a:hover {
-	background-color: #aa77ff;
-	color: black;
-	font-weight: bold;
-}
-
+/* ---------------------------------------------------------------------- HEADER SECTION */
 header {
-	text-align: center;
 	margin: 15% 0;
+	text-align: center;
 }
 
 header h1 {
 	display: inline-block;
-	vertical-align: middle;
-	margin: 0;
 	font-size: 3.5em;
-	/* max-width: 80vw; */
-	/* font-size: 5vw; */
+	margin: 0;
+	vertical-align: middle;
 }
 
 header p {
@@ -64,21 +68,22 @@ header p {
 	margin: 0;
 }
 
+
+/* ---------------------------------------------------------------------- ABOUT SECTION */
 section#about > div {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	/* grid-template-rows: 1fr 1fr; */
 }
 
 section#about > div > div:last-child {
-	text-align: center; /* img */
+	text-align: center;
 }
 
 section#about img {
 	height: auto;
+	margin: 5%;
 	max-width: 250px;
 	min-width: 100px;
-	margin: 5%;
 }
 
 section#about > div:last-child {
@@ -86,27 +91,30 @@ section#about > div:last-child {
 	grid-row: 2 / span 1;
 }
 
+
+/* ---------------------------------------------------------------------- PROJECTS SECTION */
 section#projects > div {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 	grid-gap: 30px;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 	margin-bottom: 30px;
 	/* grid-template-rows: 1fr 1fr; */
 }
 
 section#projects > div > div {
+	border: 1px solid white;
 	padding: 20px;
 	padding-top: 0;
-	border: 1px solid white;
 }
 
 
+/* ---------------------------------------------------------------------- EXPERIENCE/TECHNOLOGIES SECTION */
 section#experience > ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	grid-gap: 30px;
-	padding: 0;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	margin-bottom: 60px;
+	padding: 0;
 }
 
 section#experience li {
@@ -117,14 +125,17 @@ section#experience > div {
 	justify-self: center;
 }
 
+
+/* ---------------------------------------------------------------------- FOOTER SECTION */
 footer {
-	text-align: right;
 	font-size: small;
-	padding-right: 10px;
 	margin-top: 10%;
+	padding-right: 10px;
+	text-align: right;
 }
 
 
+/* ---------------------------------------------------------------------- MEDIA QUERIES FOR MOBILE LAYOUT */
 @media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
 
 	header {
