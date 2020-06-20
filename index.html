@@ -4,83 +4,103 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./stylesheet.css" rel="stylesheet" type="text/css">
 	<title>[ elliot huck ]</title>
 </head>
 
 <body>
 
-	<nav>
-		<h5>[ elliot huck ]</h5>
+	<!-- <nav>
+		<h4>[ elliot huck ]</h4>
 		<ul>
 			<li><a href="#about">About</a></li>
 			<li><a href="#projects">Projects</a></li>
 			<li><a href="#experience">Experience</a></li>
 		</ul>
 
-	</nav>
+	</nav> -->
 
 	<header>
 		<h1>Elliot Huck</h1>
-		<h2>Web Developer</h2>
+		<p>Web Developer</p>
 	</header>
 
 	<section id="about">
-		<h3>Curiosity, Creativity, Clarity</h3>
-		<p>More than just a fun alliteration, these words represent the professional values I bring to everything I work on</p>
-		<p>I value clear, helpful communication in all areas, and my intellectual curiosity drives my ability to solve problems creatively</p>
-		<p>When I'm not writing code, you'll probably find me reading an old book, playing an obscure board game, or concocting a crazy new recipe in the kitchen</p>
 
-		<img src="./files/pic-professional.jpg" alt="A rather good picture of the guy whose website this is">
+		<div class="section-grid">
+			<div>
+				<h2>Curiosity, Creativity, Clarity</h2>
+				<p>More than just a fun alliteration, these words represent the professional values I bring to everything I work on</p>
+				<p>I value clear, helpful communication in all areas, and my intellectual curiosity drives my ability to solve problems creatively</p>
+				<p>When I'm not writing code, you'll probably find me reading an old book, playing an obscure board game, or concocting a crazy new recipe in the kitchen</p>
+			</div>
+			<div class="about-img-container">
+				<img src="./files/pic-professional.jpg" alt="A rather good picture of the guy whose website this is">
+			</div>
+		</div>
 
-		<button>
-			<a href="https://www.linkedin.com/in/elliot-huck/" target="_blank">Find me on LinkedIn</a>
-		</button>
+		<div>
+			<a href="https://www.linkedin.com/in/elliot-huck/" target="_blank" class="link-button">
+				Find me on LinkedIn
+			</a>
+		</div>
+
 
 	</section>
 
 	<section id="projects">
-		<h3>Projects</h3>
+		<h2>Projects</h2>
 
-		<div>
-			<h4>Vocabulous</h4>
-			<p>A personal vocab list that discovers new words for you, saves your favorites, and quizzes you on them to expand your vocabulary</p>
+		<div class="section-grid">
+			<div class="project-card">
+				<h3>Vocabulous</h3>
+				<p>A personal vocab list that discovers new words for you, saves your favorites, and quizzes you on them to expand your vocabulary</p>
+			</div>
+
+			<div class="project-card">
+				<h3>RecipEase</h3>
+				<p>A virtual cookbook that saves your favorite recipes and organizes their ingredients into a customizable grocery shopping list</p>
+			</div>
 		</div>
 
 		<div>
-			<h4>RecipEase</h4>
-			<p>A virtual cookbook that saves your favorite recipes and organizes their ingredients into a customizable grocery shopping list</p>
+			<a href="https://github.com/elliot-huck" target="_blank" class="link-button">
+				See my work on GitHub
+			</a>
 		</div>
 
-		<button>
-			<a href="https://github.com/elliot-huck" target="_blank">See my work on GitHub</a>
-		</button>
 
 	</section>
 
 	<section id="experience">
-		<h3>Experience</h3>
-		<ul>
+		<h2>Experience</h2>
+
+		<ul class="section-grid">
 			<li>HTML</li>
 			<li>CSS</li>
 			<li>Javascript</li>
+			<li>jQuery</li>
+			<li>Bootstrap</li>
 			<li>React</li>
 			<li>SQL</li>
+			<li>Bash</li>
 			<li>Java</li>
 			<li>C#</li>
 			<li>.Net</li>
 			<li>Agile</li>
 		</ul>
 
-		<button>
-			<a href="./files/Elliot-Huck-Resume.pdf" target="_blank">Check out my r&eacutesum&eacute</a>
-		</button>
+		<div>
+			<a href="./files/Elliot-Huck-Resume.pdf" target="_blank" class="link-button">
+				Check out my r&eacutesum&eacute
+			</a>
+		</div>
 
 	</section>
 
 	<footer>
 		<p>Copyright &copy;
-			<script>document.write(new Date().getFullYear());</script> Elliot Huck</p>
-		<p>All rights reserved</p>
+			<script>document.write(new Date().getFullYear());</script> Elliot Huck &mdash; All rights reserved</p>
 	</footer>
 
 </body>
