@@ -1,15 +1,32 @@
-/* Resume recreation: Letter paper, with print-specific rules below. */
 @page {
   size: letter;
   margin: 0;
 }
 
+/* COLORS */
 :root {
-  --burgundy: #660033;
-  --accent: #79003c;
-  --paper: #fff8f0;
-  --ink: #21191a;
-  --rule: #20191a;
+  --plum: #281122;
+  --parchment: #fff3e5;
+  --muted-plum: #70435f;
+  --masthead-plum: #48283f;
+  --warm-charcoal: #51434a;
+  --dusty-rose: #a77d8d;
+  --soft-rose: #d8b6c5;
+  --antique-gold: #c18a54;
+  --dark-ochre: #8b5a35;
+  --dark-border: #59404f;
+  --light-border: #d8c5b8;
+
+  /* THEME */
+  --bg: var(--parchment);
+  --text: var(--plum);
+  --text-secondary: var(--warm-charcoal);
+  --accent: var(--muted-plum);
+  --rule: var(--light-border);
+
+  --header-bg: var(--masthead-plum);
+  --header-text: var(--parchment);
+  --header-accent: var(--soft-rose);
 }
 
 * {
@@ -25,8 +42,8 @@ body {
 body {
   padding: 10px;
   background: #666;
-  color: var(--ink);
-  font-family: "Lato", "Arial", sans-serif;
+  color: var(--text);
+  font-family: "Ubuntu", sans-serif;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -36,72 +53,78 @@ body {
   height: 11in;
   margin: 0 auto;
   overflow: hidden;
-  background: var(--paper);
+  background: var(--bg);
   border: 1px solid #999;
 }
 
+/* HEADER */
 .masthead {
   height: 1.45in;
   padding: 0 0.48in;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--burgundy);
-  color: var(--paper);
+  background: var(--header-bg);
+  color: var(--header-text);
 }
 
 .name {
-  margin: -1pt 0 0;
-  color: var(--paper);
-  font-size: 46pt;
-  font-weight: 300;
+  margin: 0;
+  color: var(--header-text);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 48pt;
+  font-weight: 100;
   letter-spacing: 0.3pt;
   line-height: 1.05;
   white-space: nowrap;
 }
 
 .contact {
+  height: 48pt;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
-  gap: 0;
+  gap: 0.25rem;
   font-size: 12pt;
-  font-style: normal;
-  font-weight: 400;
   line-height: 1.15;
-  position: relative;
-  top: 7pt;
   text-align: right;
   white-space: nowrap;
+  font-weight: 300;
+}
+
+.contact p {
+  margin: 0;
 }
 
 .contact a {
-  color: var(--paper);
+  color: var(--header-accent);
   text-decoration: none;
 }
 
+/* CONTENT */
 .resume-content {
   padding: 16pt 34pt 14pt;
 }
 
 .section-heading {
   margin: 0;
-  padding: 0 0 4.5pt;
+  padding-bottom: 4.5pt;
   border-bottom: 0.8pt solid var(--rule);
-  color: #321b21;
-  font-size: 10pt;
+  color: var(--warm-charcoal);
+  font-family: "DM Mono", monospace;
+  font-size: 14pt;
   font-weight: 400;
-  letter-spacing: 2.8pt;
+  letter-spacing: 1.5pt;
   line-height: 1.25;
 }
 
 .experience-list {
-  margin-top: 32pt;
+  margin-top: 18pt;
 }
 
 .job {
   margin: 0 0 30.5pt;
-  padding: 0;
   break-inside: avoid;
 }
 
@@ -132,11 +155,6 @@ body {
   margin: 0;
 }
 
-.role,
-.date {
-  font-style: italic;
-}
-
 .date {
   flex-shrink: 0;
   text-align: right;
@@ -145,28 +163,19 @@ body {
 
 .description {
   margin: 7pt 0 0;
-  color: #241d1d;
   font-size: 13.2pt;
-  font-weight: 400;
   line-height: 1.3;
 }
 
 .skills {
   margin: 7pt 0 0;
-  color: #161313;
+  color: var(--text-secondary);
+  font-family: "DM Mono", monospace;
   font-size: 9pt;
   line-height: 1.35;
-  white-space: normal;
 }
 
-.skills strong {
-  font-weight: 700;
-}
-
-.skills em {
-  font-weight: 400;
-}
-
+/* EDUCATION */
 .education-section {
   margin-top: 47pt;
 }
@@ -188,40 +197,32 @@ body {
 
 .education-item p {
   margin: 3pt 0 0;
-  color: #392a2b;
+  color: var(--text-secondary);
   font-size: 9.5pt;
   font-style: italic;
   line-height: 1.3;
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 860px) {
   body {
     padding: 8px;
   }
-
-  .resume-page {
-    margin: 0 auto;
-    transform-origin: top center;
-  }
 }
 
+/* PRINT */
 @media print {
   html,
   body {
     width: 8.5in;
     height: 11in;
     min-height: 0;
-    margin: 0;
     padding: 0;
-    background: var(--paper);
+    background: var(--bg);
   }
 
   .resume-page {
-    width: 8.5in;
-    height: 11in;
     margin: 0;
     border: 0;
-    box-shadow: none;
-    overflow: hidden;
   }
 }

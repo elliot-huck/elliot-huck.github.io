@@ -4,30 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Elliot Huck — Resume</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Josefin+Sans:wght@100&family=Ubuntu:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="resume-styles.css" />
   </head>
+
   <body>
-    <main class="resume-page" aria-label="Resume">
+    <main class="resume-page">
       <header class="masthead">
         <h1 class="name">Elliot Huck</h1>
-        <address class="contact">
-          <a href="mailto:elliot.w.huck@gmail.com">elliot.w.huck@gmail.com</a>
-          <a href="tel:8435406529">843-540-6529</a>
-          <a href="https://linkedin.com/in/elliot-huck"
-            >linkedin.com/in/elliot-huck</a
-          >
-        </address>
+        <div class="contact">
+          <p>elliot.w.huck@gmail.com</p>
+          <p>843-540-6529</p>
+          <a href="https://linkedin.com/in/elliot-huck">
+            linkedin.com/in/elliot-huck
+          </a>
+        </div>
       </header>
 
       <div class="resume-content">
         <section
-          class="resume-section experience-section"
+          class="experience-section"
           aria-labelledby="experience-heading"
         >
           <h2 class="section-heading" id="experience-heading">Experience</h2>
@@ -47,7 +49,7 @@
                 skills and AI-friendly workflows to accelerate development.
               </p>
               <p class="skills">
-                <strong>Main tools &amp; skills:</strong>
+                <!-- <strong>Main tools &amp; skills:</strong> -->
                 <em
                   >Go, SQL, React, Typescript, AI/LLM-assisted development,
                   harness engineering</em
@@ -70,7 +72,7 @@
                 that was adopted by sixteen teams.
               </p>
               <p class="skills">
-                <strong>Main tools &amp; skills:</strong>
+                <!-- <strong>Main tools &amp; skills:</strong> -->
                 <em
                   >C#, .Net, SQL, React, Typescript, Agile software
                   development</em
@@ -91,27 +93,25 @@
                 requirements, pitching the idea, and demoing the final product.
               </p>
               <p class="skills">
-                <strong>Main tools &amp; skills:</strong>
+                <!-- <strong>Main tools &amp; skills:</strong> -->
                 <em>Java, SQL, debugging</em>
               </p>
             </article>
           </div>
         </section>
 
-        <section
-          class="resume-section education-section"
-          aria-labelledby="education-heading"
-        >
+        <section class="education-section" aria-labelledby="education-heading">
           <h2 class="section-heading" id="education-heading">Education</h2>
+
           <div class="education-grid">
-            <div class="education-item">
+            <article class="education-item">
               <h3>Nashville Software School</h3>
               <p>Full-Stack Web Development</p>
-            </div>
-            <div class="education-item">
+            </article>
+            <article class="education-item">
               <h3>Vanderbilt University</h3>
               <p>BS Economics, BS Spanish</p>
-            </div>
+            </article>
           </div>
         </section>
       </div>
